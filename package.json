@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/TC-42-54/tsu-core.git"
   },
-  "version": "0.0.2",
+  "version": "0.0.1",
   "scripts": {
     "build": "tsc",
     "test": "vitest"
@@ -31,5 +31,11 @@
   },
   "engines": {
     "node": ">= 16"
+  },
+  "dependencies": {
+    "@tsupp/array": "^0.0.2",
+    "@tsupp/number": "^0.0.1",
+    "@tsupp/object": "^0.0.2",
+    "@tsupp/string": "^0.0.2"
   }
 }

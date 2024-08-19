@@ -474,11 +474,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tsupp/array@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@tsupp/array@npm:0.0.2"
+  checksum: 10c0/bc90a4660028c504b62eaeb67e386d5df1f453e225c211211e74d104e0bf8a638f3e358b89d969cb78c1b69786465d15aa8fb0099e02880d7f0d572c0f82db6b
+  languageName: node
+  linkType: hard
+
 "@tsupp/core@workspace:.":
   version: 0.0.0-use.local
   resolution: "@tsupp/core@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.8.0"
+    "@tsupp/array": "npm:^0.0.2"
+    "@tsupp/number": "npm:^0.0.1"
+    "@tsupp/object": "npm:^0.0.2"
+    "@tsupp/string": "npm:^0.0.2"
     "@types/eslint__js": "npm:^8.42.3"
     "@types/node": "npm:^22.2.0"
     eslint: "npm:9.x"
@@ -490,6 +501,27 @@ __metadata:
     vitest: "npm:^2.0.5"
   languageName: unknown
   linkType: soft
+
+"@tsupp/number@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@tsupp/number@npm:0.0.1"
+  checksum: 10c0/56510b5eb9f1d0b7bf649fc178a5175a5edacfc8e072d1d84f73af3fec66937ebd31414ab271125d55a6c43e1424e96f0c641cacc9ab6cc4c9ab5e4195ed0567
+  languageName: node
+  linkType: hard
+
+"@tsupp/object@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@tsupp/object@npm:0.0.2"
+  checksum: 10c0/bb73ec086a11a702e266aa32375207a0a61b9992aa6335002843c9b58741f306620dbb490b74fbfc14255c01785c68582638eb9393a26612cb9fd5b36a98ab26
+  languageName: node
+  linkType: hard
+
+"@tsupp/string@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@tsupp/string@npm:0.0.2"
+  checksum: 10c0/ba07f162af6a87a4bb4fe1feb405b6e08daf7c2be3fce0816626433f170a3e84a0e9f8c19fda9c0a9dd642939db238e6a4d84eb4ea18604efd1e7f98e7781be6
+  languageName: node
+  linkType: hard
 
 "@types/eslint@npm:*":
   version: 9.6.0
