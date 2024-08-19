@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+      "module": "NodeNext",
+      "declaration": true,
+      "removeComments": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "target": "ESNext",
+      "sourceMap": true,
+      "outDir": "./dist",
+      "baseUrl": "./src",
+      "incremental": true,
+      "skipLibCheck": true,
+      "strictNullChecks": false,
+      "noImplicitAny": false,
+      "strictBindCallApply": false,
+      "forceConsistentCasingInFileNames": false,
+      "noFallthroughCasesInSwitch": false,
+      "inlineSources": true,
+      "moduleResolution": "NodeNext",
+      "importHelpers": true,
+      "downlevelIteration": true,
+      "types": ["node"]
+    },
+    "exclude": [
+      "node_modules",
+      "src/test",
+      "dist",
+      "**/*test.ts",
+      ".vscode"
+    ]
+  }
