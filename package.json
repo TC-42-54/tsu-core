@@ -5,10 +5,12 @@
     "type": "git",
     "url": "git+https://github.com/TC-42-54/tsu-core.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "tsc",
-    "test": "vitest"
+    "test": "vitest",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix"
   },
   "license": "MIT",
   "author": "Thomas Chezieres",
@@ -33,9 +35,9 @@
     "node": ">= 16"
   },
   "dependencies": {
-    "@tsupp/array": "^0.0.2",
-    "@tsupp/number": "^0.0.1",
-    "@tsupp/object": "^0.0.2",
-    "@tsupp/string": "^0.0.2"
+    "@tsupp/array": "^0.0.3",
+    "@tsupp/number": "^0.0.2",
+    "@tsupp/object": "^0.0.3",
+    "@tsupp/string": "^0.0.3"
   }
 }

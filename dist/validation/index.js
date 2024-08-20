@@ -22,7 +22,8 @@ const isEmpty = (variable) => {
         return false;
     }
     else if ((0, object_1.isObject)(variable)) {
-        return (0, object_1.isEmptyObject)(variable) || !Object.keys(variable).some(key => !(0, exports.isEmpty)(variable[key]));
+        return ((0, object_1.isEmptyObject)(variable) ||
+            !Object.keys(variable).some((key) => !(0, exports.isEmpty)(variable[key])));
     }
     else if ((0, number_1.isNumber)(variable) || (0, exports.isFunction)(variable)) {
         return false;

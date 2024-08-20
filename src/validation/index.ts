@@ -1,8 +1,8 @@
-import { isArray } from "@tsupp/array";
-import { isNumber } from "@tsupp/number";
-import { isEmptyObject, isObject, isPromise } from "@tsupp/object";
-import { isString } from "@tsupp/string";
-import assert, { AssertionError } from "assert";
+import { isArray } from '@tsupp/array';
+import { isNumber } from '@tsupp/number';
+import { isEmptyObject, isObject, isPromise } from '@tsupp/object';
+import { isString } from '@tsupp/string';
+import assert, { AssertionError } from 'assert';
 
 export const isFunction = (variable: unknown): boolean =>
   typeof variable === 'function';
@@ -19,8 +19,10 @@ export const isEmpty = (variable: unknown) => {
   } else if (isPromise(variable)) {
     return false;
   } else if (isObject(variable)) {
-
-    return isEmptyObject(variable) || !Object.keys(variable).some(key => !isEmpty(variable[key]));
+    return (
+      isEmptyObject(variable) ||
+      !Object.keys(variable).some((key) => !isEmpty(variable[key]))
+    );
   } else if (isNumber(variable) || isFunction(variable)) {
     return false;
   }
@@ -30,11 +32,12 @@ export const assertNonEmptyVariable = (
   variable: unknown,
   functionName: string,
   message: string,
-) => assert.equal(
-  !isEmpty(variable),
-  true,
-  new AssertionError({
-    message: `ERROR - [${functionName}] - ${message}`,
-    actual: variable,
-  }),
-);
+) =>
+  assert.equal(
+    !isEmpty(variable),
+    true,
+    new AssertionError({
+      message: `ERROR - [${functionName}] - ${message}`,
+      actual: variable,
+    }),
+  );
