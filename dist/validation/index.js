@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.assertNonEmptyVariable = exports.isEmpty = exports.isFunction = void 0;
+exports.assertFunction = exports.assertNonEmptyVariable = exports.isEmpty = exports.isFunction = void 0;
 const tslib_1 = require("tslib");
 const array_1 = require("@tsupp/array");
 const number_1 = require("@tsupp/number");
@@ -35,4 +35,10 @@ const assertNonEmptyVariable = (variable, functionName, message) => assert_1.def
     actual: variable,
 }));
 exports.assertNonEmptyVariable = assertNonEmptyVariable;
+const assertFunction = (variable, functionName, message) => assert_1.default.equal((0, exports.isFunction)(variable), true, new assert_1.AssertionError({
+    message: `ERROR - [${functionName}] - ${message}`,
+    actual: (0, exports.isFunction)(variable),
+    expected: true,
+}));
+exports.assertFunction = assertFunction;
 //# sourceMappingURL=index.js.map
