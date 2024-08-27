@@ -41,3 +41,17 @@ export const assertNonEmptyVariable = (
       actual: variable,
     }),
   );
+
+export const assertFunction = (
+  variable: unknown,
+  functionName: string,
+  message: string,
+) =>
+  assert.equal(
+    isFunction(variable),
+    true,
+    new AssertionError({
+      message: `ERROR - [${functionName}] - ${message}`,
+      actual: isFunction(variable),
+    }),
+  );
