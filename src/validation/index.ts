@@ -53,5 +53,6 @@ export const assertFunction = (
     new AssertionError({
       message: `ERROR - [${functionName}] - ${message}`,
       actual: isFunction(variable),
+      expected: true,
     }),
   );
